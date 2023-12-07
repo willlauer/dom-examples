@@ -93,12 +93,14 @@ function main() {
 
   // Draw the scene repeatedly
   function render(now) {
-    now *= 0.001; // convert to seconds
-    deltaTime = now - then;
-    then = now;
+    // now *= 0.001; // convert to seconds
+    // deltaTime = now - then;
+    // then = now;
 
-    drawScene(gl, programInfo, buffers, texture, cubeRotation);
-    cubeRotation += deltaTime;
+    // z = depth
+
+    drawScene(gl, programInfo, buffers, texture, { x: 0.2, y: 0, z: 0.0 });
+    /// cubeRotation += deltaTime;
 
     requestAnimationFrame(render);
   }
